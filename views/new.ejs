@@ -1,0 +1,29 @@
+<% include ./partials/header %>
+
+<div class="container" id="form-container">
+	<h1>Create new post</h1>
+	<form action="/gallery" method="POST">
+		<div class="form-group">
+			<input class="form-control" type="text" name="post[image]" placeholder="Image URL" required>
+		</div>
+		<div class="form-group">
+			<input class="form-control" type="text" name="post[description]" placeholder="Description">
+		</div>
+		
+		<div class="form-group">
+			<select class="form-control" name="post[category]">
+				<option>Landscape</option>
+				<option>Cityscape</option>
+				<option>SmallWorld</option>
+			</select>
+		</div>
+		
+		<a id="btn-back" class="btn btn-warning form-control" href="/gallery">
+			<i class="fas fa-chevron-left"></i> Back
+		</a>
+		<button id="btn-submit" class="form-control btn btn-success" type="submit">Send <i class="fas fa-chevron-right"></i></button>
+	</form>
+</div>
+
+
+<% include ./partials/footer %>
