@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "thariqW",
+  "author": "thariqwarsa",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
@@ -23,5 +23,18 @@
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
     "passport-local-mongoose": "^5.0.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thariqwarsa/thariqphoto.git"
+  },
+  "keywords": [
+    "photo gallery",
+    "css",
+    "html",
+    "javascript",
+    "mongodb",
+    "bootstrap",
+    "express"
+  ]
 }
