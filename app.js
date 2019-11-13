@@ -1,4 +1,4 @@
-//ThariqPhoto V5
+//ThariqPhoto V5 Deployed
 require("dotenv").config();
 
 var express 	 			= require("express"),
@@ -17,7 +17,10 @@ var express 	 			= require("express"),
 	app 					= express();
 	
 //APP and DB CONFIG
-mongoose.connect("mongodb://localhost:27017/thariqPhoto_v5")
+// mongoose.connect("mongodb://localhost:27017/thariqPhoto_v5");
+mongoose.connect("mongodb+srv://thariqwarsa:" + process.env.DB_PASSWORD + "@cluster0-x1dzn.mongodb.net/test?retryWrites=true&w=majority");
+
+
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static(__dirname + "/public"));
 app.use(methodOverride("_method"));
@@ -263,6 +266,11 @@ app.get("*", function(req, res){
 });
 
 //SETUP SERVER
-app.listen(5000, function(){
-	console.log("ThariqPhoto Server is Running!")
+// app.listen(5000, function(){
+// 	console.log("ThariqPhoto Server is Running!")
+// });
+
+//HEROKU LISTEN CONFIIG
+app.listen(process.env.PORT, process.env.IP, function(){
+   console.log("ThariqPhoto Server is Running!");
 });
