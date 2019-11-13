@@ -17,7 +17,6 @@ var express 	 			= require("express"),
 	app 					= express();
 	
 //APP and DB CONFIG
-// mongoose.connect("mongodb://localhost:27017/thariqPhoto_v5");
 mongoose.connect("mongodb+srv://thariqwarsa:" + process.env.DB_PASSWORD + "@cluster0-x1dzn.mongodb.net/test?retryWrites=true&w=majority");
 
 
@@ -264,11 +263,6 @@ app.get("*", function(req, res){
 	req.flash("error", "Invalid URL");
 	res.redirect("/");
 });
-
-//SETUP SERVER
-// app.listen(5000, function(){
-// 	console.log("ThariqPhoto Server is Running!")
-// });
 
 //HEROKU LISTEN CONFIIG
 app.listen(process.env.PORT, process.env.IP, function(){
